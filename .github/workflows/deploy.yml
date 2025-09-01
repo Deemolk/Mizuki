@@ -1,0 +1,24 @@
+name: ?? Deploy to Hostinger
+
+on:
+  push:
+    branches: [ "main" ] # 只在推送到 main 分支时触发部署
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: ?? Checkout code
+        uses: actions/checkout@v3
+
+      - name: ?? Sync files to Hostinger
+        uses: burnett01/rsync-deployments@6.0.0
+        with:
+          switches: -avzr --delete
+          path: ./
+          remote_path: /home/u176624229/domains/deemolk/public_html/ # 替换为你的服务器上网站实际目录
+          remote_host: ${{ secrets.SSH_HOST }}
+          remote_port: ${{ secrets.SSH_PORT }}
+          remote_user: ${{ secrets.SSH_USER }}
+          remote_key: "${{ secrets.SSH_PRIVATE_KEY }}"
