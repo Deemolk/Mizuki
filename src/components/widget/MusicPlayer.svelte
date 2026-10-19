@@ -12,7 +12,7 @@ import Key from "../../i18n/i18nKey";
 import { i18n } from "../../i18n/translation";
 
 // 音乐播放器模式，可选 "local" 或 "meting"，从本地配置中获取或使用默认值 "meting"
-let mode = musicPlayerConfig.mode ?? "meting";
+let mode = musicPlayerConfig.mode ?? "local";
 // Meting API 地址，从配置中获取或使用默认地址(bilibili.uno(由哔哩哔哩松坂有希公益管理)),服务器在海外,部分音乐平台可能不支持并且速度可能慢,也可以自建Meting API
 let meting_api =
 	musicPlayerConfig.meting_api ??
@@ -66,8 +66,16 @@ let progressBar: HTMLElement;
 let volumeBar: HTMLElement;
 
 const localPlaylist = [
-	{
+    {
 		id: 1,
+		title: "レイル・ロマネスク (Rail Romanesque)",
+		artist: "中恵光城",
+		cover: "assets/music/cover/Rail_Romanesque.jpg",
+		url: "assets/music/url/Rail_Romanesque.mp3",
+		duration: 240,
+	},
+	{
+		id: 2,
 		title: "ひとり上手",
 		artist: "Kaya",
 		cover: "assets/music/cover/hitori.jpg",
@@ -75,7 +83,7 @@ const localPlaylist = [
 		duration: 240,
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "眩耀夜行",
 		artist: "スリーズブーケ",
 		cover: "assets/music/cover/xryx.jpg",
@@ -83,7 +91,7 @@ const localPlaylist = [
 		duration: 180,
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "春雷の頃",
 		artist: "22/7",
 		cover: "assets/music/cover/cl.jpg",

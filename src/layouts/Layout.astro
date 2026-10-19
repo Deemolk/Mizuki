@@ -144,6 +144,10 @@ const bannerOffset =
 
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Insight 追踪脚本 -->
+		<script defer data-site="deemolk" src="https://insight.deemolk.com/t.js?s=deemolk"></script>
+		
 		{favicons.map(favicon => (
 			<link rel="icon"
 				  href={favicon.src.startsWith('/') ? url(favicon.src) : favicon.src}

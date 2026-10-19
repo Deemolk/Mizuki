@@ -5,7 +5,7 @@ export interface TimelineItem {
 	id: string;
 	title: string;
 	description: string;
-	type: "education" | "work" | "project" | "achievement";
+	type: "education" | "work" | "project" | "achievement" | "autodidacticism";
 	startDate: string;
 	endDate?: string; // 如果为空表示至今
 	location?: string;
@@ -26,160 +26,52 @@ export interface TimelineItem {
 export const timelineData: TimelineItem[] = [
 	{
 		id: "current-study",
-		title: "计算机科学与技术专业在读",
+		title: "曾就读太平洋大学本科音乐与媒体双专业",
 		description:
-			"目前正在学习计算机科学与技术专业，专注于Web开发和软件工程方向。",
+			"",
 		type: "education",
-		startDate: "2022-09-01",
-		location: "北京",
-		organization: "北京理工大学",
-		skills: ["Java", "Python", "JavaScript", "HTML/CSS", "MySQL"],
+		startDate: "2021-08-21",
+		endDate: "2025-05-28",
+		location: "美国，加州，斯托克顿",
+		organization: "太平洋大学University of Pacific",
+		skills: ["音乐理论", "对位法", "流行作曲", "基础管弦乐", "世界音乐历史", "世界民族音乐", "平面设计", "电影制作", "绘画", "C++"],
 		achievements: [
-			"当前GPA: 3.6/4.0",
-			"完成了数据结构与算法课程设计",
-			"参与了多个课程项目开发",
+			"当前GPA: 3.74/4.0",
+			"专攻于媒体行业制作人",
+			"参与多个影视创作与音乐创作项目",
+			"作为全能媒体制作人对媒体各行业都具备一定能力"
 		],
 		icon: "material-symbols:school",
-		color: "#059669",
+		color: "#059669", 
 		featured: true,
-	},
-	{
-		id: "mizuki-blog-project",
-		title: "Mizuki个人博客项目",
-		description:
-			"使用Astro框架开发的个人博客网站，作为学习前端技术的实践项目。",
-		type: "project",
-		startDate: "2024-06-01",
-		endDate: "2024-08-01",
-		skills: ["Astro", "TypeScript", "Tailwind CSS", "Git"],
-		achievements: [
-			"掌握了现代前端开发技术栈",
-			"学会了响应式设计和用户体验优化",
-			"完成了从设计到部署的完整流程",
-		],
-		links: [
-			{
-				name: "GitHub Repository",
-				url: "https://github.com/example/mizuki-blog",
-				type: "project",
-			},
-			{
-				name: "Live Demo",
-				url: "https://mizuki-demo.example.com",
-				type: "website",
-			},
-		],
-		icon: "material-symbols:code",
-		color: "#7C3AED",
-		featured: true,
-	},
-	{
-		id: "summer-internship-2024",
-		title: "前端开发实习生",
-		description: "暑期在一家互联网公司实习，参与Web应用的前端开发工作。",
-		type: "work",
-		startDate: "2024-07-01",
-		endDate: "2024-08-31",
-		location: "北京",
-		organization: "TechStart科技有限公司",
-		position: "Frontend Development Intern",
-		skills: ["React", "JavaScript", "CSS3", "Git", "Figma"],
-		achievements: [
-			"完成了用户界面组件的开发",
-			"学习了团队协作和代码规范",
-			"获得了实习优秀表现证明",
-		],
-		icon: "material-symbols:work",
-		color: "#DC2626",
-		featured: true,
-	},
-	{
-		id: "web-development-course",
-		title: "Web开发在线课程完成",
-		description: "完成了全栈Web开发的在线课程，系统学习了前后端开发技术。",
-		type: "achievement",
-		startDate: "2024-01-15",
-		endDate: "2024-05-30",
-		organization: "慕课网",
-		skills: ["HTML", "CSS", "JavaScript", "Node.js", "Express"],
-		achievements: [
-			"获得了课程完成证书",
-			"完成了5个实战项目",
-			"掌握了全栈开发基础",
-		],
-		links: [
-			{
-				name: "Course Certificate",
-				url: "https://certificates.example.com/web-dev",
-				type: "certificate",
-			},
-		],
-		icon: "material-symbols:verified",
-		color: "#059669",
-	},
-	{
-		id: "student-management-system",
-		title: "学生管理系统课程设计",
-		description: "数据库课程的期末项目，开发了一个完整的学生信息管理系统。",
-		type: "project",
-		startDate: "2023-11-01",
-		endDate: "2023-12-15",
-		skills: ["Java", "MySQL", "Swing", "JDBC"],
-		achievements: [
-			"获得了课程设计优秀成绩",
-			"实现了完整的CRUD功能",
-			"学会了数据库设计和优化",
-		],
-		icon: "material-symbols:database",
-		color: "#EA580C",
 	},
 	{
 		id: "programming-contest",
-		title: "校内程序设计竞赛",
-		description: "参加了学校举办的程序设计竞赛，提升了算法和编程能力。",
+		title: "大学校内流行音乐多人创作中荣获嘉奖",
+		description: "第一次参与多人音乐创作项目，并在参与过程中提升了合作沟通的能力",
 		type: "achievement",
-		startDate: "2023-10-20",
-		location: "北京理工大学",
-		organization: "计算机学院",
-		skills: ["C++", "算法", "数据结构"],
+		startDate: "2023-8-27",
+		endDate: "2023-8-27",
+		location: "太平洋大学",
+		organization: "太平洋大学音乐学院",
+		skills: ["流行作曲"],
 		achievements: [
-			"获得了校内竞赛三等奖",
-			"提升了算法思维能力",
-			"加强了编程基础技能",
+			"流行音乐多人创作中获得最佳创意奖"
 		],
 		icon: "material-symbols:emoji-events",
 		color: "#7C3AED",
 	},
 	{
-		id: "part-time-tutor",
-		title: "编程家教兼职",
-		description: "为高中生提供编程入门辅导，帮助他们学习Python基础。",
-		type: "work",
-		startDate: "2023-09-01",
-		endDate: "2024-01-31",
-		position: "编程辅导老师",
-		skills: ["Python", "教学", "沟通"],
-		achievements: [
-			"帮助3名学生掌握了Python基础",
-			"提升了表达和沟通能力",
-			"获得了教学经验",
-		],
-		icon: "material-symbols:school",
-		color: "#059669",
-	},
-	{
 		id: "high-school-graduation",
 		title: "高中毕业",
-		description: "以优异成绩从高中毕业，考入北京理工大学计算机科学与技术专业。",
+		description: "",
 		type: "education",
-		startDate: "2019-09-01",
-		endDate: "2022-06-30",
-		location: "山东济南",
-		organization: "济南市第一中学",
+		startDate: "2018-09-01",
+		endDate: "2021-06-30",
+		location: "广东中山",
+		organization: "中山市第一中学国际部",
 		achievements: [
-			"高考成绩620分",
-			"获得了市级三好学生称号",
-			"在数学竞赛中获得省级二等奖",
+			"",
 		],
 		icon: "material-symbols:school",
 		color: "#2563EB",
@@ -187,14 +79,27 @@ export const timelineData: TimelineItem[] = [
 	{
 		id: "first-programming-experience",
 		title: "初次接触编程",
-		description: "在高中信息技术课上第一次接触编程，开始学习Python基础语法。",
+		description: "大学GE课程中选修C++，开始对编程显露兴趣",
 		type: "education",
-		startDate: "2021-03-01",
+		startDate: "2023-08-27",
 		skills: ["Python", "基础编程概念"],
 		achievements: [
 			'完成了第一个"Hello World"程序',
 			"学会了基本的循环和条件语句",
 			"培养了对编程的兴趣",
+			"为后来自学其他语言的编程提供了基础"
+		],
+		icon: "material-symbols:code",
+		color: "#7C3AED",
+	},
+	{
+		id: "smart-contract-learning",
+		title: "开始接触并学习DeFi智能合约",
+		type: "autodidacticism",
+				startDate: "2025-08-24",
+		skills: ["Solidity", "加密货币", "智能合约", "Web3"],
+		achievements: [
+			""
 		],
 		icon: "material-symbols:code",
 		color: "#7C3AED",
@@ -230,8 +135,8 @@ export const getTimelineStats = () => {
 		education: timelineData.filter((item) => item.type === "education").length,
 		work: timelineData.filter((item) => item.type === "work").length,
 		project: timelineData.filter((item) => item.type === "project").length,
-		achievement: timelineData.filter((item) => item.type === "achievement")
-			.length,
+		achievement: timelineData.filter((item) => item.type === "achievement").length,
+		自学经历: timelineData.filter((item) => item.type === "autodidacticism").length,
 	};
 
 	return { total, byType };

@@ -6,7 +6,7 @@ export interface Skill {
 	name: string;
 	description: string;
 	icon: string; // Iconify icon name
-	category: "frontend" | "backend" | "database" | "tools" | "other";
+	category: "Art" | "backend" | "database" | "tools" | "other";
 	level: "beginner" | "intermediate" | "advanced" | "expert";
 	experience: {
 		years: number;
@@ -18,139 +18,19 @@ export interface Skill {
 }
 
 export const skillsData: Skill[] = [
-	// Frontend Skills
+	// Art Skills
 	{
-		id: "javascript",
-		name: "JavaScript",
-		description: "现代JavaScript开发，包括ES6+语法、异步编程、模块化开发等。",
-		icon: "logos:javascript",
-		category: "frontend",
+		id: "Music",
+		name: "音乐理论",
+		description: "基础音乐理论，专注于功能性与非功能性和声研究。",
+		icon: "logos:vue",
+		category: "Art",
 		level: "advanced",
-		experience: { years: 3, months: 6 },
+		experience: { years: 4, months: 2 },
 		projects: ["mizuki-blog", "portfolio-website", "data-visualization-tool"],
 		color: "#F7DF1E",
 	},
-	{
-		id: "typescript",
-		name: "TypeScript",
-		description: "类型安全的JavaScript超集，提升代码质量和开发效率。",
-		icon: "logos:typescript-icon",
-		category: "frontend",
-		level: "advanced",
-		experience: { years: 2, months: 8 },
-		projects: ["mizuki-blog", "portfolio-website", "task-manager-app"],
-		color: "#3178C6",
-	},
-	{
-		id: "react",
-		name: "React",
-		description: "构建用户界面的JavaScript库，包括Hooks、Context、状态管理等。",
-		icon: "logos:react",
-		category: "frontend",
-		level: "advanced",
-		experience: { years: 2, months: 10 },
-		projects: ["portfolio-website", "task-manager-app"],
-		color: "#61DAFB",
-	},
-	{
-		id: "vue",
-		name: "Vue.js",
-		description: "渐进式JavaScript框架，易学易用，适合快速开发。",
-		icon: "logos:vue",
-		category: "frontend",
-		level: "intermediate",
-		experience: { years: 1, months: 8 },
-		projects: ["data-visualization-tool"],
-		color: "#4FC08D",
-	},
-	{
-		id: "angular",
-		name: "Angular",
-		description: "Google开发的企业级前端框架，功能完整的单页应用解决方案。",
-		icon: "logos:angular-icon",
-		category: "frontend",
-		level: "beginner",
-		experience: { years: 0, months: 9 },
-		projects: ["enterprise-dashboard"],
-		color: "#DD0031",
-	},
-	{
-		id: "nextjs",
-		name: "Next.js",
-		description: "React的生产级框架，支持SSR、SSG和全栈开发。",
-		icon: "logos:nextjs-icon",
-		category: "frontend",
-		level: "intermediate",
-		experience: { years: 1, months: 4 },
-		projects: ["e-commerce-frontend", "blog-platform"],
-		color: "#000000",
-	},
-	{
-		id: "nuxtjs",
-		name: "Nuxt.js",
-		description: "Vue.js的直观框架，支持服务端渲染和静态站点生成。",
-		icon: "logos:nuxt-icon",
-		category: "frontend",
-		level: "beginner",
-		experience: { years: 0, months: 6 },
-		projects: ["vue-ssr-app"],
-		color: "#00DC82",
-	},
-	{
-		id: "astro",
-		name: "Astro",
-		description: "现代静态站点生成器，支持多框架集成和优秀的性能。",
-		icon: "logos:astro-icon",
-		category: "frontend",
-		level: "advanced",
-		experience: { years: 1, months: 2 },
-		projects: ["mizuki-blog"],
-		color: "#FF5D01",
-	},
-	{
-		id: "tailwindcss",
-		name: "Tailwind CSS",
-		description: "实用优先的CSS框架，快速构建现代化用户界面。",
-		icon: "logos:tailwindcss-icon",
-		category: "frontend",
-		level: "advanced",
-		experience: { years: 2, months: 0 },
-		projects: ["mizuki-blog", "portfolio-website"],
-		color: "#06B6D4",
-	},
-	{
-		id: "sass",
-		name: "Sass/SCSS",
-		description: "CSS预处理器，提供变量、嵌套、混合等高级功能。",
-		icon: "logos:sass",
-		category: "frontend",
-		level: "intermediate",
-		experience: { years: 2, months: 3 },
-		projects: ["legacy-website", "component-library"],
-		color: "#CF649A",
-	},
-	{
-		id: "webpack",
-		name: "Webpack",
-		description: "现代JavaScript应用的静态模块打包器。",
-		icon: "logos:webpack",
-		category: "frontend",
-		level: "intermediate",
-		experience: { years: 1, months: 10 },
-		projects: ["custom-build-tool", "spa-application"],
-		color: "#8DD6F9",
-	},
-	{
-		id: "vite",
-		name: "Vite",
-		description: "下一代前端构建工具，快速的冷启动和热更新。",
-		icon: "logos:vitejs",
-		category: "frontend",
-		level: "intermediate",
-		experience: { years: 1, months: 2 },
-		projects: ["vue-project", "react-project"],
-		color: "#646CFF",
-	},
+
 
 	// Backend Skills
 	{
@@ -639,11 +519,11 @@ export const getSkillStats = () => {
 		expert: skillsData.filter((s) => s.level === "expert").length,
 	};
 	const byCategory = {
-		frontend: skillsData.filter((s) => s.category === "frontend").length,
-		backend: skillsData.filter((s) => s.category === "backend").length,
-		database: skillsData.filter((s) => s.category === "database").length,
-		tools: skillsData.filter((s) => s.category === "tools").length,
-		other: skillsData.filter((s) => s.category === "other").length,
+		艺术: skillsData.filter((s) => s.category === "Art").length,
+		数学: skillsData.filter((s) => s.category === "Mathematics").length,
+		神学: skillsData.filter((s) => s.category === "Theology").length,
+		金融学: skillsData.filter((s) => s.category === "Finace").length,
+		其他: skillsData.filter((s) => s.category === "Other").length,
 	};
 
 	return { total, byLevel, byCategory };
